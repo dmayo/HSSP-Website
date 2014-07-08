@@ -1,15 +1,3 @@
-<?php
-require "checklogin.php";
-require "config/config.php";
-
-if(!isset($_COOKIE["upload_user"])||!isset($_COOKIE["user_code"])||checklogin ($db_server, $db_username, $db_password, $db_database, $_COOKIE["upload_user"], $_COOKIE["user_code"])==false) {
-    echo '<head><META HTTP-EQUIV="Pragma" CONTENT="no-cache"><META HTTP-EQUIV="Expires" CONTENT="-1"></head>';
-	echo '<meta http-equiv="refresh" content="0;url=login.php">';
-}
-else{
-	echo 'Hi '+$_COOKIE["upload_user"];
-	echo "it works";
-?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -19,7 +7,7 @@ else{
     <title>Introductory Electricity</title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="../css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -32,7 +20,7 @@ else{
 
     <div class="container">
       
-      <div class="hero-unit" style="background-image: url('../img/MIT_Dome_2_smaller.jpg');color:white;">
+      <div class="hero-unit" style="background-image: url('img/MIT_Dome_2_smaller.jpg');color:white;">
         <h1><a href="index.html" style="color:white;text-decoration:none;text-shadow: 1px 1px #000000;">Introductory Electricity</a></h1>
         <br />
         <br />
@@ -132,12 +120,7 @@ else{
       <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
       <!-- Include all compiled plugins (below), or include individual files as needed -->
-      <script src="../js/bootstrap.js"></script>
+      <script src="js/bootstrap.js"></script>
     </div>
   </body>
 </html>
-
-<?php
-}
-
-?>
